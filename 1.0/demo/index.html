@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Checkall的demo</title>
+    <script src="http://g.tbcdn.cn/kissy/k/1.4.1/seed-min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="http://g.tbcdn.cn/kissy/k/1.3.0/css/dpl/base-min.css">
+</head>
+<body>
+<h2>Checkall的demo</h2>
+
+<div class="check-list">
+
+    <hr>
+    <div class="J_CheckListContainerBasic">
+        <h4>基本使用</h4>
+
+        <div class="check-all">
+            <label>全选 <input type="checkbox" class="J_CheckAll"></label>
+            <ul class="sub-checkbox">
+                <li><label>选中 <input type="checkbox" class="J_CheckItem"></label></li>
+                <li><label>选中 <input type="checkbox" class="J_CheckItem"></label></li>
+                <li><label>选中 <input type="checkbox" class="J_CheckItem"></label></li>
+            </ul>
+        </div>
+    </div>
+
+    <hr>
+    <div class="J_CheckListContainerMultiple">
+        <h4>多个全选框</h4>
+
+        <div class="check-all">
+            <label>全选 <input type="checkbox" class="J_CheckAll"></label>
+            <ul class="sub-checkbox">
+                <li><label>选中 <input type="checkbox" class="J_CheckItem"></label></li>
+                <li><label>选中 <input type="checkbox" class="J_CheckItem"></label></li>
+                <li><label>选中 <input type="checkbox" class="J_CheckItem"></label></li>
+            </ul>
+            <label>全选 <input type="checkbox" class="J_CheckAll"></label>
+        </div>
+    </div>
+
+    <hr>
+    <div class="J_CheckListContainerNesting">
+        <h4>嵌套多选</h4>
+
+        <div class="check-all">
+            <label>全选 <input type="checkbox" class="J_CheckAll"></label>
+            <ul class="sub-checkbox">
+                <li><label>选中 <input type="checkbox" class="J_CheckItem"></label></li>
+                <li><label>选中 <input type="checkbox" class="J_CheckItem"></label></li>
+                <li><label>选中 <input type="checkbox" class="J_CheckItem"></label></li>
+                <li class="J_SubCheckListContainer">
+                    <label>选中 <input type="checkbox" class="J_CheckItem J_SubCheckAll"></label>
+                    <ul class="sub-sub-checkbox">
+                        <li><label>选中 <input type="checkbox" class="J_SubCheckItem"></label></li>
+                        <li><label>选中 <input type="checkbox" class="J_SubCheckItem"></label></li>
+                        <li><label>选中 <input type="checkbox" class="J_SubCheckItem"></label></li>
+                    </ul>
+                </li>
+
+                <li class="J_SubCheckListContainer2">
+                    <label>选中 <input type="checkbox" class="J_CheckItem J_SubCheckAll"></label>
+                    <ul class="sub-sub-checkbox">
+                        <li><label>选中 <input type="checkbox" class="J_SubCheckItem"></label></li>
+                        <li><label>选中 <input type="checkbox" class="J_SubCheckItem"></label></li>
+                        <li><label>选中 <input type="checkbox" class="J_SubCheckItem"></label></li>
+                    </ul>
+                </li>
+            </ul>
+            <label>全选 <input type="checkbox" class="J_CheckAll"></label>
+        </div>
+    </div>
+</div>
+
+<script>
+    var S = KISSY;
+    if (S.Config.debug) {
+        var srcPath = "../../";
+        S.config({
+            packages: [
+                {
+                    name: "gallery/checkall",
+                    path: srcPath,
+                    charset: "utf-8",
+                    ignorePackageNameInUri: true
+                }
+            ]
+        });
+    }
+
+    S.use('gallery/checkall/1.0/index', function (S, Checkall) {
+        new Checkall({
+            container: '.J_CheckListContainerBasic',
+            checkAll: '.J_CheckAll',
+            checkItem: '.J_CheckItem'
+        });
+
+        new Checkall({
+            container: '.J_CheckListContainerMultiple',
+            checkAll: '.J_CheckAll',
+            checkItem: '.J_CheckItem'
+        });
+
+        new Checkall({
+            container: '.J_CheckListContainerNesting',
+            checkAll: '.J_CheckAll',
+            checkItem: '.J_CheckItem'
+        });
+
+        new Checkall({
+            container: '.J_SubCheckListContainer',
+            checkAll: '.J_SubCheckAll',
+            checkItem: '.J_SubCheckItem'
+        });
+
+        new Checkall({
+            container: '.J_SubCheckListContainer2',
+            checkAll: '.J_SubCheckAll',
+            checkItem: '.J_SubCheckItem'
+        });
+    })
+</script>
+</body>
+</html>

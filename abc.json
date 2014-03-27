@@ -1,0 +1,18 @@
+{
+    "name": "checkall",
+    "comName":"Checkall",
+    "version": "1.0",
+    "desc": "Checkall是用于非常常见的全选功能的组件。支持多层嵌套的全选功能。",
+    "tag":"全选",
+    "githubName":"neekey",
+    "author": {
+        "name": "yinruo.nyj",
+        "email": "yinruo.nyj@taobao.com",
+        "page": "https://github.com/neekey"
+    },
+	"flexComboPort":"81",
+	"reserveServerPort":"8080",
+    "type": "kissy-gallery",
+    "cover": "http://gtms04.alicdn.com/tps/i4/T1y.LSFpxcXXXXgTPH-578-562.png",
+    "type-url": "http://gallery.kissyui.com/guide"
+}
